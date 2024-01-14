@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
+ 
+/*
 int	main(void)
 {
 	const char *cadena = "Hello, World!";
@@ -19,3 +20,26 @@ int	main(void)
 	printf("%zu", machete);
 	return (0);
 }
+
+int	main(void)
+{
+	char *string;
+	string = strdup("Hello, World!");
+	puts(string);
+	
+	ft_memset(string,'$', 4);
+	puts(string);
+
+	return(0);
+}
+
+int	main(void)
+{
+	char string[] = "Hello. World!";
+	printf("%s\n", string);
+
+	ft_bzero(string, 4);
+	printf("%s\n", string);
+	return (0);
+}
+*/

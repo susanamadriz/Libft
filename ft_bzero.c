@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sjuan-ma <sjuan-ma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sjuan-ma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/08 14:31:02 by sjuan-ma          #+#    #+#             */
-/*   Updated: 2024/01/10 14:09:13 by sjuan-ma         ###   ########.fr       */
+/*   Created: 2024/01/14 15:08:42 by sjuan-ma          #+#    #+#             */
+/*   Updated: 2024/01/14 15:08:58 by sjuan-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-int	ft_isalpha(int c)
+void	ft_bzero(void *s, size_t n)
 {
-	if((c < 'A' && c > 'Z') && (c < 'a' && c > 'z'))
-		return  (0);
-	return  (1);
-}
-int	main()
-{
-	ft_isalpha("S");
-	printf()
+	unsigned char *z;
+	size_t contar;
+
+	z = s;
+	contar = 0;
+	while (z[contar] && contar < n)
+	{
+		z[contar] = 0;
+		contar++;
+	}
 }
