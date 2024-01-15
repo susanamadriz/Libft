@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sjuan-ma <sjuan-ma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sjuan-ma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/09 12:05:02 by sjuan-ma          #+#    #+#             */
-/*   Updated: 2024/01/10 14:11:10 by sjuan-ma         ###   ########.fr       */
+/*   Created: 2024/01/15 11:34:50 by sjuan-ma          #+#    #+#             */
+/*   Updated: 2024/01/15 11:39:50 by sjuan-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-int	ft_isalnum(int c)
+void * ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 {
-	if ((c < '0' && c > '9') || (c < 'a' && c > 'z') || (c < 'A' && c > 'Z'))
-		return	(0);
-	return	(1);
+	size_t contar;
+
+	size_t = 0;
+	while (src[contar] && contar < n)
+	{
+		src[contar] = dst[contar];
+		contar++;
+	}
+	return (dst);
 }
