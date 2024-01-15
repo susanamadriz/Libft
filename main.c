@@ -12,6 +12,13 @@
 #include "libft.h"
  
 /*
+int	main()
+{
+	ft_isalpha("S");
+	printf()
+}
+*/
+/*
 int	main(void)
 {
 	const char *cadena = "Hello, World!";
@@ -20,7 +27,8 @@ int	main(void)
 	printf("%zu", machete);
 	return (0);
 }
-
+*/
+/*
 int	main(void)
 {
 	char *string;
@@ -32,7 +40,8 @@ int	main(void)
 
 	return(0);
 }
-
+*/
+/*
 int	main(void)
 {
 	char string[] = "Hello. World!";
