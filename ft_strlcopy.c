@@ -1,27 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlcopy.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sjuan-ma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/10 13:59:41 by sjuan-ma          #+#    #+#             */
-/*   Updated: 2024/01/10 13:59:44 by sjuan-ma         ###   ########.fr       */
+/*   Created: 2024/01/19 12:53:27 by sjuan-ma          #+#    #+#             */
+/*   Updated: 2024/01/19 12:53:30 by sjuan-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
 
-void *ft_memset(void *b, int c, size_t len)
-{
-	unsigned char *s;
-	size_t contar;
 
-	s = b;
-	contar = 0;
-	while (s[contar] && contar < len)
-	{
-		s[contar] = (unsigned char)c;
-		contar++;
-	}
-	return (b);
-}

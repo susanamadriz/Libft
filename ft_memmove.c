@@ -1,27 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sjuan-ma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/10 13:59:41 by sjuan-ma          #+#    #+#             */
-/*   Updated: 2024/01/10 13:59:44 by sjuan-ma         ###   ########.fr       */
+/*   Created: 2024/01/16 14:46:09 by sjuan-ma          #+#    #+#             */
+/*   Updated: 2024/01/16 14:46:14 by sjuan-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void *ft_memset(void *b, int c, size_t len)
+void *ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char *s;
-	size_t contar;
+	unsigned char *to = dst;
+	const unsigned char *from = src;
+	size_t count;
 
-	s = b;
-	contar = 0;
-	while (s[contar] && contar < len)
+	count = len;
+	if (to < from)
 	{
-		s[contar] = (unsigned char)c;
-		contar++;
+		count = 0;
+		while (count < len)
+		{
+			to[count] = from[count];
+			count++;
+		}
 	}
-	return (b);
+	else (to > from);
+	{
+		while (count > 0)
+		{
+			count--;
+			to[count] = from[count];
+		}
+	}
+	return (dst);
 }

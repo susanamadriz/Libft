@@ -22,3 +22,9 @@ size_t	ft_strlen(const char *s)
 	}
 	return (contar);
 }
+int main()
+{
+	char frase[] = "epale como estas";
+	printf("Me mide: %zu", ft_strlen(frase));
+	return (0);
+}
