@@ -13,8 +13,8 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *z;
-	size_t count;
+	unsigned char	*z;
+	size_t			count;
 
 	z = s;
 	count = 0;
