@@ -24,18 +24,18 @@ void *ft_calloc(size_t count, size_t size)
         return (NULL);
     while (total_size > 0)
     {
-        pointer[total_size] = 0;
+        pointer[total_size - 1] = '0';
         total_size--;
     }
     return (pointer);    
 }
 int main()
 {
-	int *prueba;
+	char *prueba;
 
-	prueba = calloc(10, sizeof(int));
-	for (int i = 0; i < 10; i++)
-		printf("%i", *(prueba + i)); //= prueba[i]
+	prueba = ft_calloc(10, sizeof(char));
+/* 	for (int i = 0; i < 10; i++) */
+		printf("%s", prueba); //= prueba[i]
 	free (prueba);
 	return(0);
 }
