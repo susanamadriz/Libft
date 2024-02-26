@@ -20,7 +20,7 @@ int	ft_atoi(const char *str)
 	i = 0;
 	sign = 1;
 	conversion = 0;
-	if (((int)str < -2147483648) || ((int)str > 2147483647)
+	if (((int)str < -2147483648) || ((int)str > 2147483647))
 		return (-1);
 	while ((str[i] == ' ') || (str[i] >= 9 && str[i] <= 13))
 		i++;
@@ -39,12 +39,12 @@ int	ft_atoi(const char *str)
 	}
 	return (conversion * sign);
 }
+/* {
 int main()
-{
-	char hola[] = "12121212121212121212121212121212121212";
+	char hola[] = "-211";
 	int result;
 
 	result = ft_atoi(hola);
 	printf("%d", result);
 	return (0);
-}
+} */

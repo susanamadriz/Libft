@@ -11,11 +11,11 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int i;
-	char *str1;
-	char *str2;
+	size_t	i;
+	char	*str1;
+	char	*str2;
 
 	i = 0;
 	str1 = (char *)s1;
@@ -30,18 +30,18 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-int main()
-{
-	char *str1 = "hole que tal";
-	char *str2 = "hola que tal";
-	char result;
+// int main()
+// {
+// 	char *str1 = "hole que tal";
+// 	char *str2 = "hola que tal";
+// 	char result;
 
-	result = ft_memcmp(str1, str2, 10);
-	if (result > 0)
-		printf("str1 es mayor");
-	else if (result < 0)
-		printf("str1 es menor");
-	else if (result == 0)
-		printf("str1 es igual");
-	return (0);
-}
+// 	result = ft_memcmp(str1, str2, 10);
+// 	if (result > 0)
+// 		printf("str1 es mayor");
+// 	else if (result < 0)
+// 		printf("str1 es menor");
+// 	else if (result == 0)
+// 		printf("str1 es igual");
+// 	return (0);
+// }

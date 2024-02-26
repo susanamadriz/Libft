@@ -1,41 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sjuan-ma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/14 12:00:36 by sjuan-ma          #+#    #+#             */
-/*   Updated: 2024/02/14 12:00:39 by sjuan-ma         ###   ########.fr       */
+/*   Created: 2024/02/21 12:45:55 by sjuan-ma          #+#    #+#             */
+/*   Updated: 2024/02/21 12:45:57 by sjuan-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
 	size_t	j;
+	char	*new;
 
 	i = 0;
-	if (!(*needle))
-		return ((char *)haystack);
-	while (i < len && haystack[i])
+	j = ft_strlen(s1);
+	if (s1 == NULL || set == NULL)
+		return (NULL);
+	while (s1[i] && (ft_strchr(set, s1[i])))
 	{
-		j = 0;
-		while (haystack[i + j] == needle[j] && needle[j] && (i + j) < len)
-			j++;
-		if (!needle[j])
-			return ((char *)haystack + i);
 		i++;
 	}
-	return (NULL);
+	while (j > 0 && (ft_strchr(set, s1[j])))
+	{
+		j--;
+	}
+	new = ft_substr(s1, i, j - i + 1);
+	return (new);
 }
-// int main()
-// {
 
-//     char s1[] = "hola que tal";
-//     char s2[] = "que";
-//     char *result;
-//     result = strnstr(s1, s2, strlen(s1));
-//     return (0);
-// }
+/* int	main(void)
+{
+	char const	string1 [] = "cacacaviva la vidaca";
+	char const	checkstr [] = "ca";
+
+	printf("%s\n", ft_strtrim(string1, checkstr));
+} */

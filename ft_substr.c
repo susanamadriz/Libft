@@ -17,7 +17,13 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	size_t i;
 
 	i = 0;
-	new = malloc ((len + 1) * sizeof(char));
+	if (s == NULL)
+		return (NULL);
+	if (start >= ft_strlen(s))
+		return(ft_strdup(""));
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
+	new = malloc((len + 1) + sizeof(char));
 	if (new == NULL)
 		return (NULL);
 	while (i < len)
@@ -29,8 +35,8 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	new[i] = '\0';
 	return (new);
 }
-/*
-int main()
+
+/* int main()
 {
 	char str[] = "Copia desde aquí";
 	char *result;
@@ -39,10 +45,10 @@ int main()
 	printf(":%s:", result);
 	free (result);
 	return (0);
-}
-*/
-int	main()
+} */
+
+/* int	main()
 {
 	char str[] = "holamundo";
-	printf("%s\n", ft_substr(str, 3, 7));
-}
+	printf("%s\n", ft_substr(str, 4, 7));
+} */

@@ -18,26 +18,30 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	len = ft_strlen(dst);
 	i = len;
-	while (src[len - i] && len < dstsize - 1)
+	if (dstsize == 0)
+		return (ft_strlen(src));
+	if (len >= dstsize)
+		return (ft_strlen(src) + dstsize);
+	while (*src && len < dstsize - 1)
 	{
 		dst[len] = src[len - i];
 		len++;
 	}
-	if (len < dstsize)
+	if (len > dstsize)
 		dst[len] = '\0';
 	return (ft_strlen(src) + i);
 }
 
-int main(void)
+/* int main(void)
 {
   char const origen[] = "Como estas";
-  char destino[20] = "Hola, ";
+  char destino[] = "Hola, ";
   size_t size;
   size_t result;
 
-  size = 18;
+  size = 20;
   result = ft_strlcat(destino, origen, size);
   printf("Función original: %zu\n", result);
   printf("%s\n", destino);
   return (0);
-}
+} */

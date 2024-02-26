@@ -11,7 +11,16 @@
 /* ************************************************************************** */
 #include "libft.h"
  
- int main ()
+
+int	main(void)
+{
+	char const	string1 [] = "cacacaviva la vidaca";
+	char const	checkstr [] = "ca";
+
+	printf("%s\n", ft_strtrim(string1, checkstr));
+}
+
+/*  int main ()
 {
 	char letra;
 	letra = '7';
@@ -25,7 +34,7 @@
 		printf("no es una letra");
 	}
 	return (0);
-}
+} */
 /* int main ()
 {
 	char numero;

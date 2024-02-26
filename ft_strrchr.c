@@ -11,36 +11,37 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	int i;
-	int len;
+	int	i;
+	int	len;
 
 	len = ft_strlen(s);
 	i = 0;
-	while (len > i)
+	while (len >= i)
 	{
-		if (s[len - i++] == c)
+		if (s[len - i++] == (char) c)
 		{
 			return ((char *)&s[len - (i - 1)]);
 		}
 	}
 	return (NULL);
 }
-int main() {
-    const char *str = "hello world";
-    char *result;
-    char char_to_find = 'l';
 
-    // Buscar la última aparición del carácter en la cadena
-    result = ft_strrchr(str, char_to_find);
+//  int main() {
+//     const char *str = "seta";
+//     char *result;
+//     int char_to_find = ('t' - 256);
 
-    // Verificar si el resultado es nulo
-    if (result == NULL) {
-        printf("El carácter '%c' no se encuentra en la cadena.\n", char_to_find);
-    } else {
-        printf("Última aparición de '%c' encontrada en: %s\n", char_to_find, result);
-    }
+//     // Buscar la última aparición del carácter en la cadena
+//     result = ft_strrchr(str, char_to_find);
 
-    return 0;
-}
+//     // Verificar si el resultado es nulo
+//     if (result == NULL) {
+//         printf("El carácter '%c' no se encuentra en la cadena.\n", char_to_find);
+//     } else {
+//         printf("Última aparición de '%c' encontrada en: %s\n", char_to_find, result);
+//     }
+
+//     return 0;
+// } 

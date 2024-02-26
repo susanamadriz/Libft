@@ -11,38 +11,38 @@
 /* ************************************************************************** */
 #include "libft.h"
 
- size_t ft_strlcpy(char * dst, const char * src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	if (dstsize == 0)
+	size_t	i;
+
+	i = 0;
+	if (dstsize == 0 || src == 0)
 	{
 		return (ft_strlen(src));
 	}
-	size_t i;
-
-	i = 0;
-	while(i < dstsize - 1 && src != '\0')
+	while (i < dstsize - 1 && src[i] != '\0')
 	{
 		dst[i] = src[i];
 		i++;
 	}
 	dst[i] = '\0';
-	while(src[i] != '\0')
+	while (src[i] != '\0')
 	{
 		i++;
 	}
-	return (i);
+	return (ft_strlen(src));
 }
-int main()
-{
-	char destino[]= "Hola";
-	char origen[]= "190";
-	size_t size;
-	size_t result;
-	size_t miresult;
+// int main()
+//  {
+//  	char destino[]= "/n";
+// 	char origen[]= "lorem";
+//  	size_t size;
+//  	size_t result;
+// 	size_t miresult;
 
-	size = 4;
-	result = strlcpy(destino, origen, size);
-	miresult = ft_strlcpy(destino, origen, size);
-	printf("Función original: %zu\n", result);
-	printf("Función mia: %zu\n", miresult);
-}
+//  	size = 15;
+//  	result = strlcpy(destino, origen, size);
+//  	miresult = ft_strlcpy(destino, origen, size);
+//  	printf("Función original: %zu\n", result);
+//  	printf("Función mia: %zu\n", miresult);
+//  }

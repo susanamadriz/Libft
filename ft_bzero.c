@@ -18,7 +18,7 @@ void	ft_bzero(void *s, size_t n)
 
 	z = s;
 	count = 0;
-	while (z[count] && count < n)
+	while (count < n)
 	{
 		z[count] = 0;
 		count++;
