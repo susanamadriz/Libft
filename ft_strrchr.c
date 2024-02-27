@@ -38,9 +38,9 @@ char	*ft_strrchr(const char *s, int c)
 
 //     // Verificar si el resultado es nulo
 //     if (result == NULL) {
-//         printf("El carácter '%c' no se encuentra en la cadena.\n", char_to_find);
+//         printf("'%c' no se encuentra en la cadena.\n", char_to_find);
 //     } else {
-//         printf("Última aparición de '%c' encontrada en: %s\n", char_to_find, result);
+//         printf("'%c' encontrada en: %s\n", char_to_find, result);
 //     }
 
 //     return 0;
