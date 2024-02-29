@@ -24,7 +24,7 @@ void	*ft_calloc(size_t count, size_t size)
 		return (NULL);
 	while (total_size > 0)
 	{
-		pointer[total_size - 1] = '0';
+		pointer[total_size - 1] = 0;
 		total_size--;
 	}
 	return (pointer);

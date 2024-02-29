@@ -12,25 +12,30 @@
 
 #include "libft.h"
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char *new;
-	int i;
-	int conversion;
-	int sign;
+	char		*new;
+	size_t		counter;
+	long int	n_long;
 
-	i = strlen(n);
-	conversion = 0;
-
-	new = calloc ()
-		if (new = NULL)
-	if (n[0] == '-')
-		sign = -1;
-	while (n[i] = '\0' && n[i] >= 0 && n[i] <= 9)
+	n_long = (long int)n;
+	counter = 0;
+	if ((long int)n <= 0)
+		counter++;
+	while ((n_long != 0) && (counter++ >= 0))
+		n_long = n_long / 10;
+	new = ft_calloc(counter + 1, sizeof(char));
+	if(new == NULL)
+		return (NULL);
+	n_long = (long int)n;
+	if ((long int)n < 0)
+		(n_long = (long int)n * -1);
+	while (counter-- != 0)
 	{
-		conversion = conversion % 10;
-		conversion = conversion + n[i] + '0';
-		i--;
+		new[counter] = n_long % 10 + '0';
+		n_long = n_long / 10;
 	}
-	return (conversion * sign);
+	if ((long int)n < 0)
+		new[0] = '-';
+	return (new);
 }

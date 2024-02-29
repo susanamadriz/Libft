@@ -14,22 +14,22 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*new;
-	size_t		i;
+	size_t	i;
 	size_t	len1;
 	size_t	len2;
 
 	i = 0;
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
-	new = malloc ((len1 + len2) * sizeof(char) + 1);
+	new = ft_calloc ((len1 + len2 + 1), sizeof(char));
 	if (new == NULL)
 		return (NULL);
 	while (i < (len1 + len2))
 	{
 		while (i < len1)
 			new[i++] = *s1++;
-		new [i++] = *s2++;
-		new[i] = '\0';
+		new[i++] = *s2++;
+		// new[i] = '\0';
 	}
 	return (new);
 }

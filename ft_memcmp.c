@@ -14,17 +14,17 @@
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t	i;
-	char	*str1;
-	char	*str2;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
 	i = 0;
-	str1 = (char *)s1;
-	str2 = (char *)s2;
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
 	while (i < n)
 	{
-		if (str1[i] != str2[i])
+		if ((int)str1[i] != (int)str2[i])
 		{
-			return ((char)str1[i] - (char)str2[i]);
+			return ((int)str1[i] - (int)str2[i]);
 		}
 		i++;
 	}
@@ -32,11 +32,13 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 }
 // int main()
 // {
-// 	char *str1 = "hole que tal";
-// 	char *str2 = "hola que tal";
+// 	char *str1 = "abcdef";
+// 	char *str2 = "abc\375xx";
 // 	char result;
 
-// 	result = ft_memcmp(str1, str2, 10);
+// 	result = ft_memcmp(str1, str2, 5);
+// 	while (*str2)
+// 		printf("%i\n", *str2++);
 // 	if (result > 0)
 // 		printf("str1 es mayor");
 // 	else if (result < 0)
