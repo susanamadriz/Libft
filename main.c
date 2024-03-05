@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
- 
-
 /* int	main(void)
 {
 	char const	string1 [] = "cacacaviva la vidaca";

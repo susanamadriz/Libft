@@ -11,10 +11,10 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t i;
-	char *new;
+	size_t	i;
+	char	*new;
 
 	new = malloc((strlen(s) * sizeof(char)) + 1);
 	if (new == NULL)
@@ -26,7 +26,5 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		new[i] = f(i, s[i]);
 		i++;
 	}
-	return (new); 
+	return (new);
 }
-
-

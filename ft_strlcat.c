@@ -42,21 +42,21 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[len] = '\0';
 	return (ft_strlen(src) + i);
 }
-// int main(void)
-// {
- /*  char const origen[] = "lorem ipsum dolor sit amet";
+/* int main(void)
+{
+  char const origen[] = "lorem ipsum dolor sit amet";
   char destino[14] = "a";
   size_t size;
   size_t result;
 
-  size = 15; */
-//   result = ft_strlcat(destino, origen, size);
-  //printf("NUM: %zu\n", ft_strlcat("pqrstuvwxyz", "abcd", 20));
-//   printf("%s\n", destino);
-  //return (0);
-//}
+  size = 15;
+  result = ft_strlcat(destino, origen, size);
+  printf("NUM: %zu\n", ft_strlcat("pqrstuvwxyz", "abcd", 20));
+  printf("%s\n", destino);
+  return (0);
+}
 
-/* int main(void)
+int main(void)
 {
  char dest[10] = "12345";
 char dest2[10] = "12345";

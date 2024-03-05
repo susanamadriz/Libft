@@ -18,6 +18,8 @@ void	ft_bzero(void *s, size_t n)
 
 	z = s;
 	count = 0;
+	if (n == 0)
+		return (*s);
 	while (count < n)
 	{
 		z[count] = 0;

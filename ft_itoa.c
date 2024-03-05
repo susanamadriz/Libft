@@ -25,7 +25,7 @@ char	*ft_itoa(int n)
 	while ((n_long != 0) && (counter++ >= 0))
 		n_long = n_long / 10;
 	new = ft_calloc(counter + 1, sizeof(char));
-	if(new == NULL)
+	if (new == NULL)
 		return (NULL);
 	n_long = (long int)n;
 	if ((long int)n < 0)
