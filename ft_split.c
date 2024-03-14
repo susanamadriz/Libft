@@ -14,10 +14,10 @@
 
 int	safe_malloc(char **token_v, int position, size_t buffer)
 {
-	token_v[position] = malloc(buffer);
-	if (NULL == token_v[position])
+	token_v[position] = ft_calloc(buffer, sizeof(char));
+	if (token_v[position] == NULL)
 	{
-		while (position != 0)
+		while (position >= 0)
 			free (token_v[position--]);
 		free (token_v);
 		return (1);

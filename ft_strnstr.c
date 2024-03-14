@@ -30,12 +30,12 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-// int main()
-// {
+/* int main()
+{
 
-//     char s1[] = "hola que tal";
-//     char s2[] = "que";
-//     char *result;
-//     result = strnstr(s1, s2, strlen(s1));
-//     return (0);
-// }
+    char s1[] = "hola que tal";
+    char s2[] = "que";
+    char *result;
+    result = strnstr(s1, s2, strlen(s1));
+    return (0);
+} */

@@ -15,8 +15,6 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdio.h>
-# include <stddef.h>
-# include <stdint.h>
 # include <stdlib.h>
 
 int		ft_isalpha(int c);

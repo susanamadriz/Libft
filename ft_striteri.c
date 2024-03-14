@@ -11,6 +11,12 @@
 /* ************************************************************************** */
 #include "libft.h"
 
+/* char	prueba(unsigned int i, char *s)
+{
+	char new;
+	new = ft_toupper(*s);
+	return (new);
+} */
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	size_t	i;
@@ -22,3 +28,12 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
+/* int main()
+{
+	char *new;
+	char *new2 = "hola noseke";
+	new = ft_striteri(new2, prueba);
+	printf ("%s", new);
+	printf ("%s", new2);
+	return (0);
+} */
