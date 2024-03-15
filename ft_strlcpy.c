@@ -26,23 +26,15 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		i++;
 	}
 	dst[i] = '\0';
-	while (src[i] != '\0')
-	{
-		i++;
-	}
 	return (ft_strlen(src));
 }
-// int main()
-//  {
-//  	char destino[]= "/n";
-// 	char origen[]= "lorem";
-//  	size_t size;
-//  	size_t result;
-// 	size_t miresult;
+/* int main()
+ {
+ 	char destino[]= "/n";
+	char origen[]= "lorem";
+	size_t miresult;
 
-//  	size = 15;
-//  	result = strlcpy(destino, origen, size);
-//  	miresult = ft_strlcpy(destino, origen, size);
-//  	printf("Función original: %zu\n", result);
-//  	printf("Función mia: %zu\n", miresult);
-//  }
+ 	miresult = ft_strlcpy(destino, origen, 15);
+ 	printf("Función mia: %zu\n", miresult);
+	return 0;
+ } */

@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	safe_malloc(char **token_v, int position, size_t buffer)
+static int	safe_malloc(char **token_v, int position, size_t buffer)
 {
 	token_v[position] = ft_calloc(buffer, sizeof(char));
 	if (token_v[position] == NULL)
@@ -25,7 +25,7 @@ int	safe_malloc(char **token_v, int position, size_t buffer)
 	return (0);
 }
 
-size_t	count_tokens(char const *s, char delimeter)
+static size_t	count_tokens(char const *s, char delimeter)
 {
 	size_t	tokens;
 	int		inside_token;
@@ -49,7 +49,7 @@ size_t	count_tokens(char const *s, char delimeter)
 	return (tokens);
 }
 
-int	fill(char **token_v, char const *s, char delimeter)
+static int	fill(char **token_v, char const *s, char delimeter)
 {
 	size_t	len;
 	int		i;

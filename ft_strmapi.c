@@ -23,10 +23,12 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	i;
 	char	*new;
 
+	if (s == NULL || f == NULL)
+		return (NULL);
 	new = malloc((ft_strlen(s) * sizeof(char)) + 1);
 	if (new == NULL)
 		return (NULL);
-	new[strlen(s)] = '\0';
+	new[ft_strlen(s)] = '\0';
 	i = 0;
 	while (i < ft_strlen(s))
 	{
